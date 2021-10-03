@@ -26,20 +26,25 @@ if(isset($_POST["send"])){
     <title>login</title>
     <style>
         body{
-            background-color:burlywood;
+            background-image: url('./bbody-bg.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
         }
         .container{
             width: 50%;
-            margin:50px auto;
+            margin:100px auto;
             text-align: center;
         }
         .login{
             width: 70%;
             text-align:center;
-            background-color:blueviolet;
+            /* background-color:blueviolet; */
+            background-image: url("./login-bg.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
             padding:30px 0;
             margin: auto;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         input{
@@ -48,17 +53,18 @@ if(isset($_POST["send"])){
             border: none;
             background-color: #fff;
             outline: none;
-            border-radius: 4px;
+            border-radius: 6px;
             color:darkmagenta;
 
         }
         input[type="submit"]{
             width:30%;
             margin:auto;
-            background-color:#000;
+            background-color:#4293af;
             color:#fff;
             padding:10px;
             font-size: 20px;
+            cursor:pointer;
         }
         input::placeholder{
             color:darkmagenta;
@@ -70,6 +76,9 @@ if(isset($_POST["send"])){
             /* margin-right: 20px; */
             text-align: left;
             font-size: 25px;
+            margin-left: 60px;
+            margin-bottom: 10px;
+            display: block
         }
     </style>
 </head>
@@ -77,22 +86,19 @@ if(isset($_POST["send"])){
 <div class="container">
         <div class="login"> 
             <form action="login.php" method="POST">
-                <label for="username">user name
-                    <br>
-                    <br>
-                    <input type="text" name="username" id="username" placeholder="Enter Your Name" autocomplete="off">
-                </label>
+                <label for="username"> user name </label>
+                    
+                    <input type="text" name="username" id="username"  autocomplete="off">
+               
                 <br/>
                 <br/>
-                <label for="password"> password
-                    <br> 
-                    <br> 
-                    <input type="password" name="password" id="password" placeholder="Enter Your Password" autocomplete="off">
-                </label>
+                <label for="password"> password</label>
+                    
+                    <input type="password" name="password" id="password"  autocomplete="off">
+                
                 <br/>
                 <br/>
-                <br/>
-                <br/>
+
                 <input type="submit" value="Login" name="send">
             </form>
         </div>
