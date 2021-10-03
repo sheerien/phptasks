@@ -4,7 +4,7 @@ require_once("function.php");
 if(empty($_SESSION["user"])){
     redirect("login");
 }else{
-    echo "<h1 style='color:red;text-transform:uppercase;'> Welcome to our website: " . $_SESSION['user'] . "</h1>";
+    echo "<div style='width: 50%;background-color:#fff; border-radius:10px; padding:10px; margin:50px auto; text-align:center;box-shadow: 6px 7px 2px 0px #05406787;'><h2 style='color:#f00;font-size:50px; '>Welcome to our website  ". $_SESSION['user'] . "</h2></div>";
 }
 ?>
 
