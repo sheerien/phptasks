@@ -45,6 +45,7 @@ if(isset($_POST["send"])){
             padding:30px 0;
             margin: auto;
             border-radius: 10px;
+            box-shadow: 6px 7px 2px 0px #05406787;
         }
 
         input{
