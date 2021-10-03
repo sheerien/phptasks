@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 require_once("function.php");
 $db_username = "masrawy";
 $db_password = "12345678";
@@ -7,13 +7,12 @@ if(isset($_POST["send"])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     if($username === $db_username && $password === $db_password){
-        
-        $_SESSION["user"] = $username;
+
+        setcookie("cookie_user", $username, time() + (3600 * 40) * 30, '/', "localhost", false, true);
         redirect("home");
     }else{
-        echo "Email Or Password invalid";
+        echo "<div style='width: 50%;background-color:#fff; border-radius:10px; padding:10px; margin:50px auto; text-align:center;box-shadow: 6px 7px 2px 0px #05406787;'><h2 style='color:#f00;font-size:50px; '>Email Or Password invalid </h2></div>";
     }
-    // redirect("home");
 }
 
 ?>
@@ -87,7 +86,7 @@ if(isset($_POST["send"])){
 <div class="container">
         <div class="login"> 
             <form action="login.php" method="POST">
-                <label for="username"> user name </label>
+                <label for="username"> username </label>
                     
                     <input type="text" name="username" id="username"  autocomplete="off">
                
