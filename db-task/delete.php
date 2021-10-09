@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             $deleted = insertDB($conn, $data);
             if($deleted){
                 echo "row deleted from your db";
-                redirect("show.php");
+                redirect("show");
             }
         }
     }
