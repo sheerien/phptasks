@@ -59,7 +59,7 @@ require_once "function.php";
                 <th><?php echo  $row["id"]?></th>
                 <th><?php echo  $row["name"]?></th>
                 <th><?php echo  $row["img_path"]?></th>
-                <th><form action="delete.php" method="GET"><input type="submit" value="delete" name="delete"></form></th>
+                <th><form action="delete.php/id=<?php echo $row['id']?>" method="GET"><input type="submit" value="delete" name="delete"></form></th>
 
             </tr>
             <?php };?>
