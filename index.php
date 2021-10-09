@@ -146,7 +146,7 @@ $users = [
 
 // phpinfo();
 
-$data = 'this=is=data';
+$data = 'this text should be stored encrypted';
 $key = 'r(@F_R=ee#B$a%B!a^j)';
 $alg = 'aes-256-cbc';
 $ivb = '1234567812345678';
@@ -156,3 +156,9 @@ $decryptedData = openssl_decrypt($encryptedData, $alg, $key, 0, $ivb);
 
 echo $encryptedData . "<br>";
 echo $decryptedData;
+
+// $txt = 'r(@F_R=ee#B$a%B!a^j)';
+// $key = 'r(2*6-80+sh_masrawy?Shamss)';
+
+// $full_txt = $txt . $key;
+// echo md5($full_txt);
