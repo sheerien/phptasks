@@ -1,5 +1,4 @@
 <?php
-use MongoDB\Driver\Query;
 
 require_once("config.php");
 
