@@ -33,7 +33,7 @@ require_once "function.php";
         td,
         th {
             border: 1px solid #dddddd;
-            text-align: left;
+            text-align: center;
             padding: 8px;
         }
         
